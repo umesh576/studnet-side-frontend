@@ -12,22 +12,47 @@ const Navbar = () => {
             <Image src={"/image.png"} alt="logo" width={100} height={100} />
           </div>
           <div className="flex justify-between px-4 items-center w-full  ">
-            <div className="flex w-2/3  justify-center">
+            <div className="flex w-full  justify-center">
               <ul className="flex  gap-10">
                 <li>
-                  <a href="">Student Portal</a>
+                  <a
+                    href=""
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                  >
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a href="">Home</a>
+                  <a
+                    href=""
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                  >
+                    Abput us
+                  </a>
                 </li>
                 <li>
-                  <a href="">Abput us</a>
+                  <a
+                    href=""
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                  >
+                    Courses
+                  </a>
                 </li>
                 <li>
-                  <a href="">Courses</a>
+                  <a
+                    href=""
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                  >
+                    Student Portal
+                  </a>
                 </li>
                 <li>
-                  <a href="">Apply</a>
+                  <a
+                    href="apply_new_student"
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                  >
+                    Apply
+                  </a>
                 </li>
               </ul>
             </div>
