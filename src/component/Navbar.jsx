@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
-  const [stdProfile, setStdProfile] = useState(true);
+  const [stdProfile, setStdProfile] = useState(false);
   return (
     <div className="relative w-full">
       <div className="w-full">
@@ -64,14 +64,17 @@ const Navbar = () => {
                   </button>
                 </div>
               ) : (
-                <div className="flex">
-                  <Image
-                    src={"/image.jpg"}
-                    width={20}
-                    height={30}
-                    alt="image"
-                  />
-                  Profile
+                <div className="flex bg-blue-500 rounded-lg px-2 py-1 ">
+                  <button type="button" className="flex p-1 px-2 gap-1 ">
+                    <Image
+                      src={"/image.jpg"}
+                      width={20}
+                      height={30}
+                      alt="image"
+                      className="rounded-full"
+                    />
+                    Profile
+                  </button>
                 </div>
               )}
             </div>
