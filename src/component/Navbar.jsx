@@ -11,9 +11,9 @@ const Navbar = () => {
           <div>
             <Image src={"/image.png"} alt="logo" width={100} height={100} />
           </div>
-          <div className="flex justify-center ">
-            <div className="flex">
-              <ul className="flex gap-10">
+          <div className="flex justify-between px-4 items-center w-full  ">
+            <div className="flex w-2/3  justify-center">
+              <ul className="flex  gap-10">
                 <li>
                   <a href="">Student Portal</a>
                 </li>
