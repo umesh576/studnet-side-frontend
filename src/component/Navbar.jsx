@@ -1,17 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
+  const [stdProfile, setStdProfile] = useState(true);
   return (
-    <div className="relative">
-      <div>
-        <div className="flex">
+    <div className="relative w-full">
+      <div className="w-full">
+        <div className="flex w-full justify-between">
           <div>
             <Image src={"/image.png"} alt="logo" width={100} height={100} />
           </div>
-          <div>
-            <div>
-              <ul>
+          <div className="flex justify-center ">
+            <div className="flex">
+              <ul className="flex gap-10">
                 <li>
                   <a href="">Student Portal</a>
                 </li>
@@ -28,6 +30,25 @@ const Navbar = () => {
                   <a href="">Apply</a>
                 </li>
               </ul>
+            </div>
+            <div>
+              {stdProfile ? (
+                <div>
+                  <button className="bg-blue-500 rounded-lg px-2 py-1">
+                    Login/Signup
+                  </button>
+                </div>
+              ) : (
+                <div className="flex">
+                  <Image
+                    src={"/image.jpg"}
+                    width={20}
+                    height={30}
+                    alt="image"
+                  />
+                  Profile
+                </div>
+              )}
             </div>
           </div>
           {/* this is for mobile view */}
