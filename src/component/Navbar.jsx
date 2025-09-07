@@ -43,7 +43,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/Student-Portal"
                     className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
                   >
                     Student Portal
