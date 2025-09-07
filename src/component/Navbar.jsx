@@ -69,7 +69,7 @@ const Navbar = () => {
                   </div>
                 </a>
               ) : (
-                <div className="flex bg-blue-500 rounded-lg px-2 py-1 ">
+                <div className="flex bg-blue-500 rounded-lg px-2  ">
                   <button type="button" className="flex p-1 px-2 gap-1 ">
                     <Image
                       src={"/image.jpg"}
