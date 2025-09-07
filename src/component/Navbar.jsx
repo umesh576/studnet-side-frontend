@@ -1,9 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
-  const [stdProfile, setStdProfile] = useState(false);
+  const [stdProfile, setStdProfile] = useState(true);
+  useEffect(() => {
+    console.log("cookie: ", document.cookie);
+  }, []);
   return (
     <div className="relative w-full">
       <div className="w-full">
@@ -33,7 +36,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href=""
-                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
+                    className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2 hover:bgChange"
                   >
                     Courses
                   </a>
@@ -58,11 +61,13 @@ const Navbar = () => {
             </div>
             <div>
               {stdProfile ? (
-                <div>
-                  <button className="bg-blue-500 rounded-lg px-2 py-1">
-                    Login/Signup
-                  </button>
-                </div>
+                <a href="/login">
+                  <div>
+                    <button className="bg-blue-500 rounded-lg px-2 py-1">
+                      Login/Signup
+                    </button>
+                  </div>
+                </a>
               ) : (
                 <div className="flex bg-blue-500 rounded-lg px-2 py-1 ">
                   <button type="button" className="flex p-1 px-2 gap-1 ">
