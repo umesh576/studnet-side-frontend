@@ -1,3 +1,4 @@
+import StudentActivites from "@/component/student/StudentActivites";
 import React from "react";
 import { IoCameraOutline } from "react-icons/io5";
 
@@ -19,12 +20,16 @@ const StudentPortalPage = () => {
               alt="image"
               className="relative rounded-full"
             />
-
-            <div>
-              <IoCameraOutline />
-            </div>
           </div>
         </div>
+        <div className="relative top-7 left-50 bg-white rounded-full">
+          <div className="p-1">
+            <IoCameraOutline className="text-5xl " />
+          </div>
+        </div>
+      </div>
+      <div className="relative top-5 bg-green-400 w-2/9">
+        <StudentActivites />
       </div>
     </div>
   );
