@@ -13,7 +13,7 @@ const StudentPortalPage = () => {
           />
         </div>
         <div className="w-1/4 flex justify-center rounded-full relative top-20">
-          <div className=" w-1/2 relative flex justify-center">
+          <div className=" w-1/2  flex justify-center  relative ">
             <img
               src="/image.jpg"
               alt="image"
