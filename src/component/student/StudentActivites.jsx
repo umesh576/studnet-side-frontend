@@ -7,6 +7,7 @@ const StudentActivites = () => {
       <p>Records</p>
       <p>Notification</p>
       <p>logout</p>
+      <p>Result</p>
     </div>
   );
 };
