@@ -1,10 +1,11 @@
 import React from "react";
+import { IoCameraOutline } from "react-icons/io5";
 
 const StudentPortalPage = () => {
   return (
     <div className="w-full bg-blue-100">
       <div className="w-full">
-        <div className="w-full h-[100px]">
+        <div className="w-full h-[100px] py-4">
           <img
             src={"/image.png" || "/image.jpg"}
             alt="image"
@@ -18,6 +19,10 @@ const StudentPortalPage = () => {
               alt="image"
               className="relative rounded-full"
             />
+
+            <div>
+              <IoCameraOutline />
+            </div>
           </div>
         </div>
       </div>
