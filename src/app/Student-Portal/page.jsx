@@ -15,22 +15,26 @@ const StudentPortalPage = () => {
             />
           </div>
           <div className="w-1/4 flex justify-center rounded-full relative top-[-130px] bg-transparent border ">
-            <div className=" w-1/2 flex justify-center">
-              <img
-                src="/image.jpg"
-                alt="image"
-                className="relative rounded-full  "
-              />
-            </div>
-          </div>
-          <div className="relative  left-50 bg-white rounded-full ">
-            <div className="p-1">
-              <IoCameraOutline className="text-5xl " />
+            <div>
+              <div>
+                <div className=" w-1/2 flex justify-center">
+                  <img
+                    src="/image.jpg"
+                    alt="image"
+                    className="relative rounded-full  "
+                  />
+                </div>
+              </div>
+              <div className="left-30 bg-white rounded-full ">
+                <div className="p-1">
+                  <IoCameraOutline className="text-4xl " />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="relative flex top-5 left-32 m-2">
+      <div className="relative flex  left-32 m-2">
         <p>umesh joshi</p>
       </div>
       <div className="relative top-5 bg-green-400 w-2/9">
