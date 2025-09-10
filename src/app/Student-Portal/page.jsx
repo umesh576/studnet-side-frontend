@@ -14,10 +14,10 @@ const StudentPortalPage = () => {
               className="w-full object-contain h-[200px]"
             />
           </div>
-          <div className="w-1/4 flex justify-center rounded-full relative top-[-130px] bg-transparent border ">
-            <div>
+          <div className="w-1/4 flex justify-center relative top-[-130px] bg-transparent border ">
+            <div className="border">
               <div>
-                <div className=" w-1/2 flex justify-center">
+                <div className=" w-1/2 flex justify-center border">
                   <img
                     src="/image.jpg"
                     alt="image"
