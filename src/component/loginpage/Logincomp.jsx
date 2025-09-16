@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
+import Image from "next/image";
 
 const LoginComp = () => {
   const {
@@ -17,7 +18,7 @@ const LoginComp = () => {
             <h1>login page</h1>
             <div>
               <div>
-                {<div>{errors.username}</div>}
+                {<div>{errors.username.message}</div>}
                 <input
                   type="text"
                   {...register("username", {
@@ -37,6 +38,9 @@ const LoginComp = () => {
               width={500}
             />
           </div>
+        </div>
+        <div>
+          <button>submit</button>
         </div>
       </div>
     </div>
