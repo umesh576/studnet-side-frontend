@@ -2,6 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { loginSchema } from "@/schema/login.schema";
 
 const LoginComp = () => {
   const {
@@ -9,7 +10,7 @@ const LoginComp = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(loginSchema) });
   return (
     <div className="w-full">
       <div className="w-full">
@@ -24,27 +25,26 @@ const LoginComp = () => {
                   <div className="w-1/2 p-2">
                     <div className="w-full p-2">
                       <div className="border w-full p-3 rounded-lg">
-                        {<div>{errors.username?.message}</div>}
+                        {errors.username?.message && (
+                          <div>{errors.username?.message}</div>
+                        )}
                         <input
                           className="outline-none w-full "
                           type="text"
-                          {...register("username", {
-                            required: "Usernmae is required",
-                          })}
+                          {...register("username")}
                           placeholder="Enter username"
                         />
                       </div>
                     </div>
                     <div className="w-full p-2 ">
-                      {<div>{errors.password?.message}</div>}
+                      {errors.password?.message && (
+                        <div>{errors.password?.message}</div>
+                      )}
                       <div className="border p-3 rounded-lg">
                         <input
                           className="outline-none  w-full"
                           type="text"
-                          {...register("password", {
-                            required: true,
-                            message: "Password is required.",
-                          })}
+                          {...register("password")}
                           placeholder="Password"
                         />
                       </div>
