@@ -18,7 +18,7 @@ const LoginComp = () => {
             <h1>login page</h1>
             <div>
               <div>
-                {<div>{errors.username.message}</div>}
+                {<div>{errors.username?.message}</div>}
                 <input
                   type="text"
                   {...register("username", {
