@@ -18,13 +18,29 @@ const LoginComp = () => {
             <h1 className="text-center text-2xl font-bold">login page</h1>
             <div>
               <div>
-                {<div>{errors.username?.message}</div>}
-                <input
-                  type="text"
-                  {...register("username", {
-                    required: "Usernmae is required",
-                  })}
-                />
+                <div>
+                  {<div>{errors.username?.message}</div>}
+                  <input
+                    type="text"
+                    {...register("username", {
+                      required: "Usernmae is required",
+                    })}
+                    placeholder="Enter username"
+                  />{" "}
+                </div>
+                <div>
+                  {<div>{errors.password?.message}</div>}
+                  <div>
+                    <input
+                      type="text"
+                      {...register("password", {
+                        required: true,
+                        message: "Password is required.",
+                      })}
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
