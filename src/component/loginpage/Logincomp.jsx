@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { loginSchema } from "@/schema/login.schema";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const LoginComp = () => {
   const {
@@ -11,22 +12,30 @@ const LoginComp = () => {
     watch,
     formState: { errors },
   } = useForm({ resolver: yupResolver(loginSchema) });
+
   return (
     <div className="w-full">
       <div className="w-full">
         <div className="w-full flex justify-center items-center">
           <div className="w-1/2">
-            <form action="" className="w-full border flex justify-center">
-              <div className="border w-full p-3">
+            <form
+              onSubmit={handleSubmit((e) => {
+                console.log("abcd", e);
+              })}
+              className="w-full  flex justify-center"
+            >
+              <div className=" w-full p-3">
                 <h1 className="text-center text-2xl font-bold text-blue-500">
                   login Page
                 </h1>
-                <div className="flex justify-center w-full p-3 py-5">
+                <div className="flex justify-center w-full px-1 py-5">
                   <div className="w-1/2 p-2">
                     <div className="w-full p-2">
                       <div className="border w-full p-3 rounded-lg">
                         {errors.username?.message && (
-                          <div>{errors.username?.message}</div>
+                          <p className="text-red-500">
+                            *{errors.username?.message}
+                          </p>
                         )}
                         <input
                           className="outline-none w-full "
@@ -38,7 +47,9 @@ const LoginComp = () => {
                     </div>
                     <div className="w-full p-2 ">
                       {errors.password?.message && (
-                        <div>{errors.password?.message}</div>
+                        <p className="text-red-500">
+                          *{errors.password?.message}
+                        </p>
                       )}
                       <div className="border p-3 rounded-lg">
                         <input
@@ -51,8 +62,26 @@ const LoginComp = () => {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <button>submit</button>
+                <div className="flex justify-center ">
+                  <div className="w-1/2 px-5">
+                    <div>
+                      <a href="/signup" className="text-blue-500">
+                        Dont't have an account?
+                      </a>
+                    </div>
+                    <div>
+                      <a href="/forget_password" className="text-blue-500">
+                        Forget-Password?
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center py-3">
+                  <div className="w-1/2 flex justify-center px-5">
+                    <button className="px-6 py-2 bg-blue-600 text-white rounded-lg w-full">
+                      Submit
+                    </button>
+                  </div>
                 </div>
               </div>
             </form>
