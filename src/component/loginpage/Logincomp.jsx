@@ -14,8 +14,8 @@ const LoginComp = () => {
     <div className="w-full">
       <div className="w-full">
         <div className="w-full flex justify-center items-center">
-          <div>
-            <h1>login page</h1>
+          <div className="border w-1/2">
+            <h1 className="text-center text-2xl font-bold">login page</h1>
             <div>
               <div>
                 {<div>{errors.username?.message}</div>}
