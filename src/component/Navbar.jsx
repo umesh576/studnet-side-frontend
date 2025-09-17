@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   const [stdProfile, setStdProfile] = useState(true);
@@ -9,12 +10,18 @@ const Navbar = () => {
   }, []);
   return (
     <div className="relative w-full">
-      <div className="w-full">
-        <div className="flex w-full justify-between">
+      <div className="w-full ">
+        <div className="flex w-full justify-between border">
           <div>
-            <Image src={"/image.png"} alt="logo" width={100} height={100} />
+            <Image
+              className="rounded-lg"
+              src={"/image.png"}
+              alt="logo"
+              width={100}
+              height={100}
+            />
           </div>
-          <div className="flex justify-between px-4 items-center w-full  ">
+          <div className="flex justify-between px-4 items-center w-full max-sm:hidden ">
             <div className="flex w-full  justify-center">
               <ul className="flex  gap-10">
                 <li>
@@ -82,6 +89,19 @@ const Navbar = () => {
                   </button>
                 </div>
               )}
+            </div>
+          </div>
+          <div>
+            <div>
+              <select
+                name="Home"
+                id="home"
+                className="border p-2 rounded-full bg-black text-white"
+              >
+                <IoMenu />
+                <option value="home">Home</option>
+                <option value="home">joshi</option>
+              </select>
             </div>
           </div>
           {/* this is for mobile view */}

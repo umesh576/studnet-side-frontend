@@ -28,7 +28,7 @@ const LoginComp = () => {
                 <h1 className="text-center text-2xl font-bold text-blue-500">
                   login Page
                 </h1>
-                <div className="flex justify-center w-full px-1 py-5">
+                <div className="flex justify-center w-full px-1 py-1">
                   <div className="w-1/2 p-2">
                     <div className="w-full p-2">
                       <div className="border w-full p-3 rounded-lg">
@@ -66,7 +66,7 @@ const LoginComp = () => {
                   <div className="w-1/2 px-5">
                     <div>
                       <a href="/signup" className="text-blue-500">
-                        Dont't have an account?
+                        Don't have an account?
                       </a>
                     </div>
                     <div>

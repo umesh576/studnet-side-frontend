@@ -3,3 +3,7 @@
 .bgChange {
   background-color: yellow;
 }
+
+.navbar {
+  display: none;
+}
