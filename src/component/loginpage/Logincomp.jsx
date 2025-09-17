@@ -13,37 +13,48 @@ const LoginComp = () => {
   return (
     <div className="w-full">
       <div className="w-full">
-        <div className="w-full flex justify-center items-center">
-          <div className="border w-1/2">
-            <h1 className="text-center text-2xl font-bold">login page</h1>
-            <div>
-              <div>
-                <div>
-                  {<div>{errors.username?.message}</div>}
-                  <input
-                    type="text"
-                    {...register("username", {
-                      required: "Usernmae is required",
-                    })}
-                    placeholder="Enter username"
-                  />{" "}
-                </div>
-                <div>
-                  {<div>{errors.password?.message}</div>}
-                  <div>
-                    <input
-                      type="text"
-                      {...register("password", {
-                        required: true,
-                        message: "Password is required.",
-                      })}
-                      placeholder="Password"
-                    />
+        <div className="w-full flex flex-wrap">
+          <form action="" className="w-full border flex justify-center">
+            <div className="border w-1/2 p-3">
+              <h1 className="text-center text-2xl font-bold text-blue-500">
+                login Page
+              </h1>
+              <div className="flex justify-center w-full p-3 py-5">
+                <div className="w-1/2 p-2">
+                  <div className="w-full p-2">
+                    <div className="border w-full p-3 rounded-lg">
+                      {<div>{errors.username?.message}</div>}
+                      <input
+                        className="outline-none w-full "
+                        type="text"
+                        {...register("username", {
+                          required: "Usernmae is required",
+                        })}
+                        placeholder="Enter username"
+                      />{" "}
+                    </div>
+                  </div>
+                  <div className="w-full p-2 ">
+                    {<div>{errors.password?.message}</div>}
+                    <div className="border p-3 rounded-lg">
+                      <input
+                        className="outline-none  w-full"
+                        type="text"
+                        {...register("password", {
+                          required: true,
+                          message: "Password is required.",
+                        })}
+                        placeholder="Password"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
+              <div>
+                <button>submit</button>
+              </div>
             </div>
-          </div>
+          </form>
           <div>
             <Image
               src={
@@ -55,10 +66,7 @@ const LoginComp = () => {
             />
           </div>
         </div>
-        <div>
-          <button>submit</button>
-        </div>
-      </div>
+      </div>{" "}
     </div>
   );
 };
