@@ -2,17 +2,20 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
+import { GiCrossMark } from "react-icons/gi";
 
 const Navbar = () => {
-  const [stdProfile, setStdProfile] = useState(true);
+  const [stdProfile, setStdProfile] = useState(false);
   useEffect(() => {
     console.log("cookie: ", document.cookie);
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative w-full">
       <div className="w-full ">
-        <div className="flex w-full justify-between border">
-          <div>
+        <div className="flex w-full justify-between">
+          <div className="max-sm:w-full">
             <Image
               className="rounded-lg"
               src={"/image.png"}
@@ -21,8 +24,8 @@ const Navbar = () => {
               height={100}
             />
           </div>
-          <div className="flex justify-between px-4 items-center w-full max-sm:hidden ">
-            <div className="flex w-full  justify-center">
+          <div className="flex justify-between px-4 items-center w-full  ">
+            <div className="flex w-full  justify-center max-sm:hidden">
               <ul className="flex  gap-10">
                 <li>
                   <a
@@ -66,7 +69,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="max-sm:hidden">
               {stdProfile ? (
                 <a href="/login">
                   <div>
@@ -91,21 +94,25 @@ const Navbar = () => {
               )}
             </div>
           </div>
-          <div>
+          <div className="flex items-center p-3">
             <div>
-              <select
-                name="Home"
-                id="home"
-                className="border p-2 rounded-full bg-black text-white"
+              <button
+                className="hidden p-2 rounded-full bg-black text-white max-sm:block cursor-pointer"
+                onClick={() => setIsOpen(false)}
               >
-                <IoMenu />
-                <option value="home">Home</option>
-                <option value="home">joshi</option>
-              </select>
+                {!isOpen && <IoMenu />}
+                {isOpen && <GiCrossMark />}
+              </button>
             </div>
           </div>
           {/* this is for mobile view */}
-          <div></div>
+          {isOpen && (
+            <div>
+              <p>umesh</p>
+              <p>umesh</p>
+              <p>joshi</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
