@@ -29,7 +29,7 @@ const Navbar = () => {
               <ul className="flex  gap-10">
                 <li>
                   <a
-                    href=""
+                    href="/"
                     className="font-bold py-2 hover:bg-black hover:text-white rounded-lg px-2"
                   >
                     Home
