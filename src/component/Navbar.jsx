@@ -6,9 +6,6 @@ import { GiCrossMark } from "react-icons/gi";
 
 const Navbar = () => {
   const [stdProfile, setStdProfile] = useState(false);
-  useEffect(() => {
-    console.log("cookie: ", document.cookie);
-  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
   return (
