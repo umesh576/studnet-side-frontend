@@ -104,24 +104,25 @@ const Navbar = () => {
           </div>
           {/* this is for mobile view */}
         </div>
-        <div className="flex justify-end border w-1/3 mr-0">
-          {isOpen && (
-            <div className="block w-full">
-              <div className="bg-black text-white">
+
+        {isOpen && (
+          <div className="flex justify-end bg-white">
+            <div className="block w-1/3 absolute">
+              <div className="hover:bg-black hover:text-white">
                 <a href="/">Home</a>
               </div>
-              <div>
-                <a href="/student-portal">Student Portal</a>
+              <div className="hover:bg-black hover:text-white">
+                <a href="/Student-Portal">Student Portal</a>
               </div>
-              <div>
+              <div className="hover:bg-black hover:text-white">
                 <a href="/about-us">AboutUs</a>
               </div>
-              <div>
+              <div className="hover:bg-black hover:text-white">
                 <a href="Course">Course</a>
               </div>
-            </div>
-          )}
-        </div>
+            </div>{" "}
+          </div>
+        )}
       </div>
     </div>
   );
