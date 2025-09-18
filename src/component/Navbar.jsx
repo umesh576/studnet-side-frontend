@@ -95,7 +95,7 @@ const Navbar = () => {
             <div>
               <button
                 className="hidden p-2 rounded-full bg-black text-white max-sm:block cursor-pointer"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen((prev) => !prev)}
               >
                 {!isOpen && <IoMenu />}
                 {isOpen && <GiCrossMark />}
@@ -103,11 +103,22 @@ const Navbar = () => {
             </div>
           </div>
           {/* this is for mobile view */}
+        </div>
+        <div className="flex justify-end border w-1/3 mr-0">
           {isOpen && (
-            <div>
-              <p>umesh</p>
-              <p>umesh</p>
-              <p>joshi</p>
+            <div className="block w-full">
+              <div className="bg-black text-white">
+                <a href="/">Home</a>
+              </div>
+              <div>
+                <a href="/student-portal">Student Portal</a>
+              </div>
+              <div>
+                <a href="/about-us">AboutUs</a>
+              </div>
+              <div>
+                <a href="Course">Course</a>
+              </div>
             </div>
           )}
         </div>
