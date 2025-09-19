@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="flex justify-end bg-white">
+          <div className="flex justify-end ">
             <div className="block w-1/3 absolute">
               <div className="hover:bg-black hover:text-white">
                 <a href="/">Home</a>
