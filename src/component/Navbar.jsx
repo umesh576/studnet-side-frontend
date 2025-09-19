@@ -106,19 +106,19 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="flex justify-end ">
-            <div className="block w-1/3 absolute">
-              <div className="hover:bg-black hover:text-white">
+          <div className="w-full flex justify-end  absolute ">
+            <div className=" w-1/2  ">
+              <div className="bg-black text-center border-b-1 p-2 text-white">
                 <a href="/">Home</a>
               </div>
-              <div className="hover:bg-black hover:text-white">
+              <div className="bg-black text-center border-b-1 p-2 text-white">
                 <a href="/Student-Portal">Student Portal</a>
               </div>
-              <div className="hover:bg-black hover:text-white">
-                <a href="/about-us">AboutUs</a>
-              </div>
-              <div className="hover:bg-black hover:text-white">
+              <div className="bg-black text-center border-b-1 p-2 text-white">
                 <a href="Course">Course</a>
+              </div>
+              <div className="bg-black text-center border-b-1 p-2 text-white">
+                <a href="/about-us">AboutUs</a>
               </div>
             </div>{" "}
           </div>

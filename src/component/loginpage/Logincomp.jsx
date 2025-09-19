@@ -31,27 +31,27 @@ const LoginComp = () => {
                 <div className="flex justify-center w-full px-1 py-1">
                   <div className="w-1/2 p-2">
                     <div className="w-full p-2">
-                      <div className="border w-full p-3 rounded-lg">
-                        {errors.username?.message && (
-                          <p className="text-red-500">
-                            *{errors.username?.message}
-                          </p>
-                        )}
+                      {errors.username?.message && (
+                        <p className="text-red-500">
+                          *{errors.username?.message}
+                        </p>
+                      )}
+                      <div className="border w-full p-2 rounded-lg">
                         <input
-                          className="outline-none w-full "
+                          className="outline-none w-full  "
                           type="text"
                           {...register("username")}
                           placeholder="Enter username"
                         />
                       </div>
                     </div>
+                    {errors.password?.message && (
+                      <p className="text-red-500">
+                        *{errors.password?.message}
+                      </p>
+                    )}
                     <div className="w-full p-2 ">
-                      {errors.password?.message && (
-                        <p className="text-red-500">
-                          *{errors.password?.message}
-                        </p>
-                      )}
-                      <div className="border p-3 rounded-lg">
+                      <div className="border p-2 rounded-lg">
                         <input
                           className="outline-none  w-full"
                           type="text"
