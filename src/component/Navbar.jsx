@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="relative w-full">
       <div className="w-full ">
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between   ">
           <div className="max-sm:w-full">
             <Image
               className="rounded-lg"
@@ -119,6 +119,9 @@ const Navbar = () => {
               </div>
               <div className="bg-black text-center border-b-1 p-2 text-white">
                 <a href="/about-us">AboutUs</a>
+              </div>
+              <div className="bg-black text-center border-b-1 p-2 text-white">
+                <a href="/login">Login/Signup</a>
               </div>
             </div>{" "}
           </div>
