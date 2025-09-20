@@ -9,10 +9,10 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
       <div className="w-full ">
         <div className="flex w-full justify-between   ">
-          <div className="max-sm:w-full">
+          <div className="max-sm:w-full z-10">
             <Image
               className="rounded-lg"
               src={"/image.png"}
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="w-full flex justify-end  absolute ">
+          <div className="w-full flex justify-end  absolute z-1 ">
             <div className=" w-1/2  ">
               <div className="bg-black text-center border-b-1 p-2 text-white">
                 <a href="/">Home</a>
