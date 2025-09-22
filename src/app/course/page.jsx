@@ -6,7 +6,7 @@ const CoursePage = () => {
     {
       courseName: "science",
       courseCode: 12356,
-      description: "this is ab out related to science",
+      description: "this is about related to science",
       coursePicture: "abcd",
     },
   ];
