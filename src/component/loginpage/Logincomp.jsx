@@ -88,7 +88,7 @@ const LoginComp = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center py-3">
+                <div className="flex  justify-center py-3">
                   <div className="w-1/2 flex  justify-center px-5 max-sm:w-3/4">
                     <button className="px-6 py-2 bg-blue-600 text-white rounded-lg w-full">
                       Submit
